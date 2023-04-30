@@ -12,9 +12,67 @@
 	<body>
 		<h1>Our form</h1>
     <form method="post">
-      <label for="name">Name</label>
-      <input name="name" type="text">
+      <section>
+        <h2>Your details</h2>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text">
+      </section>
+      <section>
+        <h2>Favorite dessert</h2>
+        <input id="ice-cream" name="dessert" type="radio" value="ice-cream">
+        <label for="ice-cream">Ice cream</label>
+
+        <input id="chocolate" name="dessert" type="radio" value="chocolate">
+        <label for="chocolate">Chocolate</label>
+        
+        <input id="cake" name="dessert" type="radio" value="cake">
+        <label for="cake">Cake</label>
+
+        <input id="other-select" type="radio" name="dessert" value="other">
+        <label for="other">Other</label>
+        <input id="other" name="dessert" type="text">
+      </section>
+      <section>
+        <h2>Favorite animals</h2>
+        <input id="cats" name="animals" type="checkbox" value="cats">
+        <label for="cats">Cats</label>
+
+        <input id="dogs" name="animals" type="checkbox" value="dogs">
+        <label for="dogs">Dogs</label>
+        
+        <input id="iguanas" name="animals" type="checkbox" value="iguanas">
+        <label for="iguanas">Iguanas</label>
+
+        <input id="rabbits" name="animals" type="checkbox" value="rabbits">
+        <label for="rabbits">Rabbits</label>
+      </section>
+      <section>
+        <h2>Favorite number</h2>
+        <label for="number">Between 2-19</label>
+        <input id="number" name="number" type="text" inputmode="decimal">
+      </section>
+      <section>
+        <h2>What do you want to learn?</h2>
+        <label for="subject">Subjects</label>
+        <select name="subject" id="subject">
+          <option value="math">Math</option>
+          <option value="physics">Physics</option>
+          <option value="chemistry">Chemistry</option>
+          <option value="computer-science">Computer Science</option>
+          <option value="english">English</option>
+          <option value="biology">Biology</option>
+          <option value="history">History</option>
+        </select>
+      </section>
       <button type="submit">Submit</button>
     </form>
 	</body>
+  <style>
+    #other {
+      display: none;
+    }
+    #other-select:checked ~ #other {
+      display: inline;
+    }
+  </style>
 </html>
